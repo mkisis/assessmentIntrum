@@ -18,8 +18,8 @@ import java.util.List;
 @Setter
 @Slf4j
 public class CityInServiceWakandaImpl extends CityInService {
-    @Value("${wakanda_local_file_path_wakanda}")
-    private String localFilePath;
+    @Value("${wakanda_local_folder_path_wakanda}")
+    private String localFolderPath;
 
     @Value("${wakanda_post_url}")
     private String postUrl;
@@ -30,8 +30,8 @@ public class CityInServiceWakandaImpl extends CityInService {
 
     @Override
     public void prepareRequestsAndExecute() {
-        log.info("Checking for WAKANDA payout csv list in file path: " + localFilePath);
-        List<PaymentInfo> paymentInfos = getFileRequester().getListOfPayments(localFilePath, PaymentInfo.class);
+        log.info("Checking for WAKANDA payout csv list in folder path: " + localFolderPath);
+        List<PaymentInfo> paymentInfos = getFileRequester().getListOfPayments(localFolderPath, PaymentInfo.class);
         if (paymentInfos == null)
             return;
 

@@ -1,4 +1,4 @@
-wakanda_local_file_path_wakanda: C:\Users\martins.kisis\TestFolderCSV\CSV2.csv
+wakanda_local_folder_path_wakanda: C:\Users\martins.kisis\TestFolderCSV\
 wakanda_post_url: http://intrum.mocklab.io/payout
 wakanda_upload_cron_expression: 0 30 1 * * *
 
